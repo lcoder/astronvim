@@ -8,4 +8,7 @@ return {
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- { import = "astrocommunity.colorscheme.tokyonight" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.nvim-surround" },
+  -- { import = "astrocommunity.pack.tailwindcss" },
 }

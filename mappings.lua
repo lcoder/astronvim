@@ -25,4 +25,15 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+
+  i = {
+    -- emacs 按键绑定 https://github.com/sei40kr/nvimacs
+    ["<C-b>"] = { "<Left>", desc = "backward-char" },
+    ["<C-f>"] = { "<Right>", desc = "forward-char" },
+    ["<C-p>"] = { "<Up>", desc = "previous-line" },
+    ["<C-n>"] = { "<Down>", desc = "next-line" },
+    ["<C-a>"] = { "<Home>", desc = "move-beginning-of-line" },
+    ["<C-e>"] = { "<End>", desc = "move-end-of-line" },
+    ["<C-d>"] = { "<Del>", desc = "delete-char" },
+  }
 }

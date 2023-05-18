@@ -40,9 +40,10 @@ return {
         local null_ls = require "null-ls"
         null_ls.register(null_ls.builtins.formatting.prettierd.with {
           condition = function(util)
-            return util.root_has_file ".prettierrc"
-              or util.root_has_file ".prettierrc.json"
-              or util.root_has_file ".prettierrc.js"
+            -- disable eslint_d
+            return util.root_has_file ".2prettierrc"
+              or util.root_has_file ".2prettierrc.json"
+              or util.root_has_file ".2prettierrc.js"
           end,
         })
       end
