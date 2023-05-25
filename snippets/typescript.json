@@ -1,0 +1,37 @@
+{
+  "tsx-web": {
+		"prefix": "setup-tsx-web",
+		"body": [
+			"import React from 'react';\n",
+			"export interface ${TM_FILENAME_BASE}Props {\n  $0",
+			"}\n",
+			"export function $TM_FILENAME_BASE(props: ${TM_FILENAME_BASE}Props) {",
+			"  const {} = props;\n",
+			"  return (",
+			"    <div>\n",
+			"    </div>",
+			"  );",
+			"};\n"
+		],
+		"description": "函数式组件"
+	},
+
+	"tsx-rn": {
+		"prefix": "setup-tsx-rn",
+		"body": [
+			"import React from 'react';",
+			"import { View } from 'react-native';\n",
+			"export interface ${TM_FILENAME_BASE}Props {\n",
+			"}\n",
+			"export function $TM_FILENAME_BASE(props: ${TM_FILENAME_BASE}Props) {",
+			"  const {} = props;\n",
+			"  return (",
+			"    <View>",
+			"      $0",
+			"    </View>",
+			"  );",
+			"};\n"
+		],
+		"description": "函数式组件"
+	}
+}
