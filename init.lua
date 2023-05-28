@@ -19,7 +19,9 @@ return {
 
   -- Set colorscheme to use
   -- tokyonight
-  colorscheme = "astrodark",
+  -- colorscheme = "astrodark",
+  colorscheme = "vscode",
+  -- colorscheme = "catppuccin",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {

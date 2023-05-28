@@ -10,7 +10,7 @@ if vim.g.neovide then
 
   -- vim.opt.guifont = { "JetBrains Mono", ":h18" }
   -- vim.o.guifont = "JetBrains Mono:h16"
-  vim.o.guifont = "Source Code Pro:h20"
+  vim.o.guifont = "Source Code Pro:h18"
   vim.g.neovide_hide_mouse_when_typing = true
   vim.opt.linespace = 1
   vim.g.neovide_fullscreen = false

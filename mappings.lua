@@ -1,3 +1,7 @@
+-- <TAB> cursor jumping problem
+-- https://www.reddit.com/r/neovim/comments/z9os8x/strange_behaviour_cursor_jumping_with_tabkey
+
+
 -- Mapping data with "desc" stored directly by vim.keymap.set().
 --
 -- Please use this mappings table to set keyboard mapping since this is the
@@ -18,6 +22,8 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    -- toggle lsp symbols outline
+    ["<leader>lo"] = { function() require("aerial").toggle() end, desc = "Symbols outline" }
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
