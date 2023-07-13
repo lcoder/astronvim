@@ -1,5 +1,5 @@
 {
-  "tsx-web": {
+	"tsx-web": {
 		"prefix": "setup-tsx-web",
 		"body": [
 			"import React from 'react';\n",
@@ -15,7 +15,6 @@
 		],
 		"description": "函数式组件"
 	},
-
 	"tsx-rn": {
 		"prefix": "setup-tsx-rn",
 		"body": [
@@ -33,5 +32,15 @@
 			"};\n"
 		],
 		"description": "函数式组件"
+	},
+	"ts-hooks": {
+		"prefix": "setup-hooks",
+		"body": [
+			"\n",
+			"export function ${TM_FILENAME_BASE}() {",
+			"  $0",
+			"}",
+			"\n"
+		]
 	}
 }
