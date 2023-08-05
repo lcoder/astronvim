@@ -7,6 +7,7 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
+
 return {
   -- first key is the mode
   n = {
@@ -23,8 +24,15 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- toggle lsp symbols outline
-    ["<leader>lo"] = { function() require("aerial").toggle() end, desc = "Symbols outline" }
-    -- quick save
+    ["<leader>lo"] = { function() require("aerial").toggle() end, desc = "Symbols outline" },
+    -- toggle trouble 展示所有代码检测信息，自带的报错不会换行，用这个方便点
+    ["<leader>xx"] = { function() require("trouble").open() end, desc = "open trouble diagnostics"},
+    ["<leader>xw"] = { function() require("trouble").open("workspace_diagnostics") end, desc = "open workspace diagnostics"},
+    ["<leader>xd"] = { function() require("trouble").open("document_diagnostics") end, desc = "open document diagnostics"},
+    ["<leader>xq"] = { function() require("trouble").open("quickfix") end, desc = "open trouble quickfix"},
+    ["<leader>xl"] = { function() require("trouble").open("loclist") end, desc = "open trouble loclist"},
+    ["gR"] = { function() require("trouble").open("lsp_references") end, desc = "open trouble lsp references" }
+   -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
   t = {

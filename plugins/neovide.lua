@@ -1,9 +1,9 @@
 -- vim.opt.guifont = { "JetBrains Mono", ":h18" }
 -- vim.o.guifont = "JetBrains Mono:h16"
--- vim.o.guifont = "Source Code Pro:h18"
+-- vim.o.guifont = "Source Code Pro:h14"
 -- vim.o.guifont = "Hack Nerd Font:h16"
 
-vim.o.guifont = "FiraCode Nerd Font:h16"
+vim.o.guifont = "FiraCode Nerd Font:h14"
 vim.opt.linespace = 1
 vim.api.nvim_set_keymap("", "<D-v>", "+p<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("!", "<D-v>", "<C-R>+", { noremap = true, silent = true })

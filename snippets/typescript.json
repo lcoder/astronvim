@@ -1,6 +1,6 @@
 {
-	"tsx-web": {
-		"prefix": "setup-tsx-web",
+	"react-fn-template": {
+		"prefix": "react-fn-component",
 		"body": [
 			"import React from 'react';\n",
 			"export interface ${TM_FILENAME_BASE}Props {\n  $0",
@@ -13,28 +13,34 @@
 			"  );",
 			"};\n"
 		],
-		"description": "函数式组件"
+		"description": "tsx模板-函数式组件"
 	},
-	"tsx-rn": {
-		"prefix": "setup-tsx-rn",
+
+	"react-memo-template": {
+		"prefix": "react-memo-component",
 		"body": [
-			"import React from 'react';",
-			"import { View } from 'react-native';\n",
-			"export interface ${TM_FILENAME_BASE}Props {\n",
+			"import React, { memo } from 'react';",
+			"import classNames from 'classnames';\n",
+			"export interface ${TM_FILENAME_BASE}Props {",
+			"  className?: string;",
 			"}\n",
-			"export function $TM_FILENAME_BASE(props: ${TM_FILENAME_BASE}Props) {",
-			"  const {} = props;\n",
+			"export const $TM_FILENAME_BASE = memo<${TM_FILENAME_BASE}Props>(function $TM_FILENAME_BASE(props) {",
+			"  const {",
+			"    className,",
+			"  } = props;\n",
 			"  return (",
-			"    <View>",
-			"      $0",
-			"    </View>",
+			"    <div",
+			"      className={classNames(className)}",
+			"    >$0",
+			"    </div>",
 			"  );",
-			"};\n"
+			"});\n"
 		],
-		"description": "函数式组件"
+		"description": "tsx模板-函数式组件"
 	},
-	"ts-hooks": {
-		"prefix": "setup-hooks",
+		
+	"react-hooks-template": {
+		"prefix": "hooks",
 		"body": [
 			"\n",
 			"export function ${TM_FILENAME_BASE}() {",
