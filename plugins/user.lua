@@ -13,16 +13,30 @@ return {
   {
     "Mofiqul/vscode.nvim",
     name = "vscode",
-    config = function()
-      require("vscode").setup {}
-    end,
+    config = function() require("vscode").setup {} end,
   },
   -- https://github.com/catppuccin/nvim
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    config = function() require("catppuccin").setup {} end,
+  },
+  {
+    "yamatsum/nvim-cursorline",
+    name = "nvim-cursorline",
     config = function()
-      require("catppuccin").setup {}
+      require("nvim-cursorline").setup {
+        cursorline = {
+          enable = true,
+          timeout = 1000,
+          number = false,
+        },
+        cursorword = {
+          enable = true,
+          min_length = 3,
+          hl = { underline = true },
+        },
+      }
     end,
   },
 }
