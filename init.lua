@@ -101,5 +101,6 @@ return {
       pattern = "TelescopePreviewerLoaded",
       command = "setlocal number",
     })
+    require('rust-tools').inlay_hints.disable()
   end,
 }
